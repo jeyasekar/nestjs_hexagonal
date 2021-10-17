@@ -1,4 +1,5 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Inject, Post } from "@nestjs/common";
+import { ClientProxy } from "@nestjs/microservices";
 import { CreateProductAdapter } from "src/application/products/adapters/create-product.adapter";
 import FetchProductsAdapter from "src/application/products/adapters/fetch-products.adapter";
 import { CreateProductCommand } from "src/application/products/commnds/create-product.command";
@@ -9,7 +10,7 @@ export class ProductsController {
     constructor(
         private createProductAdapter: CreateProductAdapter,
         private fetchProductsAdapter: FetchProductsAdapter,
-
+        @Inject('REDIS_SERVICE') private readonly redisClient: ClientProxy,
     ) {
         console.log('products service controller created')
     }
@@ -26,6 +27,17 @@ export class ProductsController {
         console.log('products service controller fetchProducts method')
 
         return this.fetchProductsAdapter.handle()
+
+    }
+
+    @Get('/redis')
+    fetchRedisData() {
+        console.log('service controller fetchProducts method')
+
+        return this.redisClient.send<string>(
+            { cmd: 'first_service' },
+            'Message from',
+          );
 
     }
 }

@@ -24,4 +24,4 @@ import { ProductsSettingConstants } from 'src/infrastructure/constants/products/
                 .getTypeOrmConfig()
         )]
 })
-export class ProductsDatabaseModule { };
+export class OrderDatabaseModule { };
