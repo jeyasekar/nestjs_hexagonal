@@ -63,7 +63,7 @@ export class ConfigService {
         return options
     }
     public getPort() {
-        return this.getValue('ORDER_SERVICE_PORT', true)
+        return this.getValue('MASTER_SERVICE_PORT', true)
     }
     public isProduction() {
         const mode = this.getValue('MODE', false)
