@@ -1,8 +1,0 @@
-export class ProductsCommandPatterns {
-    static CREATE_PRODUCT = 'CREATE_PRODUCT';
-    static UPDATE_PRODUCT = 'UPDATE_PRODUCT';
-    static DELETE_PRODUCT = 'DELETE_PRODUCT';
-    static FETCH_PRODUCT_BY_NAME = 'FETCH_PRODUCT_BY_NAME';
-    static FETCH_PRODUCT_BY_ID = 'FETCH_PRODUCT_BY_ID';
-    static FETCH_PRODUCTS = 'FETCH_PRODUCTS';
-}
