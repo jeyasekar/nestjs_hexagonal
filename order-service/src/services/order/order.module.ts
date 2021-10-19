@@ -50,7 +50,7 @@ import { ProductsController } from './products.controller';
         }
     ],
 })
-export class ProductsModule {
+export class OrderModule {
     constructor() {
         console.log('ProductsModule created')
     }
