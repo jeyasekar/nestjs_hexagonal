@@ -2,7 +2,7 @@ import { Body, Controller, Get, Inject, Post } from "@nestjs/common";
 import { CreateProductAdapter } from "src/application/products/adapters/create-product.adapter";
 import FetchProductsAdapter from "src/application/products/adapters/fetch-products.adapter";
 import { CreateProductCommand } from "src/application/products/commnds/create-product.command";
-import { ProductsExtInvokerService } from "./products-ext-invoker.service";
+import { OrderExtInvokerService } from "./order-ext-invoker.service";
 
 
 @Controller()
@@ -10,7 +10,7 @@ export class ProductsController {
     constructor(
         private createProductAdapter: CreateProductAdapter,
         private fetchProductsAdapter: FetchProductsAdapter,
-        private exInvoker: ProductsExtInvokerService,
+        private exInvoker: OrderExtInvokerService,
     ) {
         console.log('products service controller created')
     }

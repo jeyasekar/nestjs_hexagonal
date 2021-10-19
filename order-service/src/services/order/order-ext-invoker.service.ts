@@ -7,7 +7,7 @@ import { ProductsCommandPatterns } from "src/infrastructure/constants/products/p
 import { ProductsSettingConstants } from "src/infrastructure/constants/products/products-settings";
 
 @Injectable()
-export class ProductsExtInvokerService {
+export class OrderExtInvokerService {
     constructor(
         @Inject(ProductsSettingConstants.MASTER_MQ_CLIENT_PROXY) private productsClient: ClientProxy,
         

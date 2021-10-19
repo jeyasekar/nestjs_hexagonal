@@ -7,7 +7,7 @@ import { Product } from 'src/core-domain/adapters/products/entities/product.enti
 import { OrderRepository } from 'src/core-domain/adapters/products/repositories/order.repository';
 import { ProductsSettingConstants } from 'src/infrastructure/constants/products/products-settings';
 import { OrderDatabaseModule } from 'src/infrastructure/database/products/products-database.module';
-import { ProductsExtInvokerService } from './products-ext-invoker.service';
+import { OrderExtInvokerService } from './order-ext-invoker.service';
 import { ProductsController } from './products.controller';
 
 @Module({
@@ -43,7 +43,7 @@ import { ProductsController } from './products.controller';
     providers: [
         CreateProductAdapter,
         FetchProductsAdapter,
-        ProductsExtInvokerService,
+        OrderExtInvokerService,
         {
             provide: ProductsSettingConstants.PRODUCTS_SERVICE,
             useClass: OrderRepository
