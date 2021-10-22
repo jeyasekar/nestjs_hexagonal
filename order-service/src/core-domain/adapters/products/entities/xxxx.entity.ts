@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity({
     name: 'products'
 })
-export class Product {
+export class xxxx {
     constructor() {
         console.log('Product entity created')
     }

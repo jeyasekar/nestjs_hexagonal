@@ -1,9 +1,9 @@
-import { Product } from "src/core-domain/adapters/products/entities/product.entity"
+import { xxxx } from "src/core-domain/adapters/products/entities/xxxx.entity"
 import { ProductModel } from "src/domian/products/models/product.model"
 import { Optional } from "typescript-optional"
 
 export class ProductMapper {
-    static toDomain(repoEntity: Product): Optional<ProductModel> {
+    static toDomain(repoEntity: xxxx): Optional<ProductModel> {
         if (!repoEntity) {
             return Optional.empty<ProductModel>()
         }
@@ -20,7 +20,7 @@ export class ProductMapper {
 
         return Optional.of(productModel)
     }
-    static toDomains(repoEntities: Product[]): ProductModel[] {
+    static toDomains(repoEntities: xxxx[]): ProductModel[] {
         const productModels = new Array<ProductModel>()
         repoEntities.forEach(
             re => {

@@ -5,11 +5,11 @@ import { IProductsService } from "src/domian/products/ports/products.service";
 import { ProductMapper } from "src/infrastructure/mapper/products/product.mapper";
 import { Repository } from "typeorm";
 import { Optional } from "typescript-optional";
-import { Product } from "../entities/product.entity";
+import { xxxx } from "../entities/xxxx.entity";
 
 @Injectable()
 export class OrderRepository implements IProductsService {
-    constructor(@InjectRepository(Product) private productsRepository: Repository<Product>) {
+    constructor(@InjectRepository(xxxx) private productsRepository: Repository<xxxx>) {
         console.log('ProductsRepository created')
     }
     async fetchProducts(): Promise<ProductModel[]> {

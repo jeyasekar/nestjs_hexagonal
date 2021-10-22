@@ -3,7 +3,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreateProductAdapter } from 'src/application/products/adapters/create-product.adapter';
 import FetchProductsAdapter from 'src/application/products/adapters/fetch-products.adapter';
-import { Product } from 'src/core-domain/adapters/products/entities/product.entity';
+import { xxxx } from 'src/core-domain/adapters/products/entities/xxxx.entity';
 import { OrderRepository } from 'src/core-domain/adapters/products/repositories/order.repository';
 import { ProductsSettingConstants } from 'src/infrastructure/constants/products/products-settings';
 import { OrderDatabaseModule } from 'src/infrastructure/database/products/products-database.module';
@@ -35,7 +35,7 @@ import { ProductsController } from './products.controller';
 
         ]),
         OrderDatabaseModule,
-        TypeOrmModule.forFeature([Product])
+        TypeOrmModule.forFeature([xxxx])
     ],
 
 
